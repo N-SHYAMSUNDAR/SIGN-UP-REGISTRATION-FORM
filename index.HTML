@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>sign in & sign up form-shyam quiz competition</title>
+        <link rel="stylesheet" href="STYLE.CSS">
+        <script src="https://kit.fontawesome.com/eed8b03450.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-box">
+                <h1 id="title">Sign Up</h1>
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id="namefield">
+                            <i class="fa-solid fa-users-line"></i>
+                            <input type="text" placeholder="Name">
+                            
+                        </div>
+                        <div class="input-field">
+                             <i class="fa-solid fa-square-envelope"></i>
+                            <input type="email" placeholder="Email">
+                            
+                        </div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password">
+                            
+                        </div>
+                        <p>Lost Password <a href="#">Click Here!</a></p>
+                    </div>
+                    <div class="btn-field">
+                        <button type="button" id="signupBtn">Sign Up</button>
+                        <button type="button" id="signinBtn" class="Disable">Sign In</button>
+                    </div>
+                </form>
+                
+                    
+            </div>
+            
+        </div>
+        <script>
+            let signupBtn = document.getElementById("signupBtn");
+            let signinBtn = document.getElementById("signinBtn");
+            let namefield = document.getElementById("namefield");
+            let title = document.getElementById("title");
+
+
+            signinBtn.onclick = function(){
+                namefield.style.maxHeight = "0";
+                title.innerHTML = "Sign In";
+                signupBtn.classList.add("Disable");
+                signinBtn.classList.remove("Disable");
+        }  
+        signupBtn.onclick = function(){
+                namefield.style.maxHeight = "60px";
+                title.innerHTML = "Sign Up";
+                signupBtn.classList.remove("Disable");
+                signinBtn.classList.add("Disable");
+        }        
+        </script>
+        <footer>
+            <p>@coprights &copy</p>
+            <p>contact:shyam_yadhav</p>
+            <p>Email:shyam12@gmail.com</p>
+            
+        </footer>
+    </body>
+</html>
